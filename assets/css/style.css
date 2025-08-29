@@ -1,0 +1,20 @@
+.custom-navbar {
+  background-color: #001219;
+}
+
+.custom-bg-dark {
+  background-color: #9d0208;
+}
+
+.custom-btn {
+  background-color: #9d0208;
+  color: #e0e1dd;
+}
+.custom-btn:hover {
+  background-color: #001219;
+  color: #e0e1dd;
+}
+
+body {
+  background-color: #e0e1dd;
+}
