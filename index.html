@@ -29,7 +29,7 @@
     <!-- Products -->
     <section id="products" class="py-5 bg-light">
         <div class="container">
-            <h2 class="text-center mb-4">Menu</h2>
+            <h2 class="text-center mb-4 fw-bold">Menu</h2>
             <div class="row" id="productList">
 
             </div>
@@ -38,27 +38,81 @@
 
     <!-- Order -->
     <section id="order" class="py-5 custom-bg-dark">
-    <div class="container text-white">
-      <h2 class="text-center mb-4">Order Summary</h2>
-      <div class="row">
-        <div class="col-md-8">
-          <ul id="orderList" class="list-group"></ul>
-        </div>
-        <div class="col-md-4">
-          <div class="card text-dark">
-            <div class="card-body">
-              <h5>Total: Rs.<span id="totalPrice">0</span></h5>
-              <button class="btn custom-btn w-100">Checkout</button>
+        <div class="container text-white">
+            <h2 class="text-center mb-4 fw-bold">Order Summary</h2>
+            <div class="row">
+                <div class="col-md-8">
+                    <ul id="orderList" class="list-group"></ul>
+                </div>
+                <div class="col-md-4">
+                    <div class="card text-dark">
+                        <div class="card-body">
+                            <h5>Total: Rs.<span id="totalPrice">0</span></h5>
+                            <button class="btn custom-btn w-100">Checkout</button>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
     <!-- Manage -->
-    <section>
+    <section id="manage" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4 fw-bold">Management</h2>
+            <ul class="nav nav-tabs" id="manageTabs" role="tablist">
+                <li class="nav-item">
+                    <button class="nav-link active tab" data-bs-toggle="tab" data-bs-target="#customers">Customers
+                    </button>
+                </li>
 
+                <li class="nav-item">
+                    <button class="nav-link tab" data-bs-toggle="tab" data-bs-target="#productsManage">Products
+                    </button>
+                </li>
+
+                <li class="nav-item">
+                    <button class="nav-link tab" data-bs-toggle="tab" data-bs-target="#orders">Orders
+                    </button>
+                </li>
+            </ul>
+
+            <div class="tab-content mt-3">
+                <!-- Customers CRUD -->
+                <div class="tab-pane fade show active" id="customers">
+                    <h4>Manage Customers</h4>
+                    <form id="customerForm" class="row g-2">
+                        <div class="col-md-4"><input type="text" id="customerName" class="form-control"
+                                placeholder="Name" required></div>
+                        <div class="col-md-4"><input type="email" id="customerEmail" class="form-control"
+                                placeholder="Email" required></div>
+                        <div class="col-md-4"><button class="btn custom-btn" type="submit">Add Customer</button></div>
+                    </form>
+                    <ul id="customerList" class="list-group mt-3"></ul>
+                </div>
+
+                <!-- Products CRUD -->
+                <div class="tab-pane fade" id="productsManage">
+                    <h4>Manage Products</h4>
+                    <form id="productForm" class="row g-2">
+                        <div class="col-md-3"><input type="text" id="prodName" class="form-control" placeholder="Name"
+                                required></div>
+                        <div class="col-md-3"><input type="number" id="prodPrice" class="form-control"
+                                placeholder="Price" required></div>
+                        <div class="col-md-3"><input type="text" id="prodImage" class="form-control"
+                                placeholder="Image URL" required></div>
+                        <div class="col-md-3"><button class="btn custom-btn" type="submit">Add Product</button></div>
+                    </form>
+                    <ul id="prodList" class="list-group mt-3"></ul>
+                </div>
+
+                <!-- Orders -->
+                <div class="tab-pane fade" id="orders">
+                    <h4>Orders</h4>
+                    <ul id="ordersList" class="list-group"></ul>
+                </div>
+            </div>
+        </div>
     </section>
 
     <footer>
