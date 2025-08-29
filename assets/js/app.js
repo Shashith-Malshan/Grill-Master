@@ -19,7 +19,7 @@ function renderProducts() {
   products.forEach((p, index) => {
     productList.innerHTML += `
       <div class="col-md-4 mb-3">
-        <div class="card h-100">
+        <div class="card h-100 shadow">
           <img src="${p.image}" class="card-img-top">
           <div class="card-body">
             <h5 class="card-title">${p.name}</h5>
